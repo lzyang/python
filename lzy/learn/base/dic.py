@@ -25,3 +25,7 @@ print dic.items()          # 返回dic所有的元素（键值对）
 print "==============================>>"
 for x in dic.items():
     print "==\t==" + str(x[0]) + str(x[1])
+
+del dic['tom']             # 删除 dic 的‘tom’元素
+print dic
+print (len(dic))
