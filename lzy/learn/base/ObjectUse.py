@@ -8,6 +8,7 @@ class Bird(object):
 
     #self，它是为了方便我们引用对象自身。方法的第一个参数必须是self，无论是否用到
     def move(self, dx, dy):
+        print self.way_of_reproduction
         position = [0,0]
         position[0] = position[0] + dx
         position[1] = position[1] + dy
@@ -33,3 +34,13 @@ class Oriole(Bird):
 summer = Chicken()
 print summer.have_feather
 print summer.move(5, 8)
+
+# __init__()是一个特殊方法(special method)。Python有一些特殊方法。Python会特殊的对待它们。特殊方法的特点是名字前后有两个下划线。
+#
+# 如果你在类中定义了__init__()这个方法，创建对象时，Python会自动调用这个方法。这个过程也叫初始化。
+
+class happyBird(Bird):
+    def __init__(self, more_words):
+        print 'We are happy birds.', more_words
+
+summer = happyBird('Happy,Happy!')
