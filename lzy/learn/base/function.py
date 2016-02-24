@@ -16,3 +16,35 @@ def square_sum(a,b):
     return c,3
 
 print square_sum(1,2)
+
+
+# 包裹传递
+print "=============包裹传递================"
+
+
+def func(*name):
+    print type(name)
+    print name
+
+func(1, 4, 6)
+func(5, 6, 7, 1, 2, 3)
+
+
+def func(**dict):
+    print type(dict)
+    print dict
+
+func(a=1, b=9)
+func(m=2, n=1, c=11)
+
+# 解包裹
+print "=============解包裹================"
+
+def func(a, b, c):
+    print a, b, c
+
+args = (1, 3, 4)
+func(*args)
+
+dict = {'a': 1, 'b': 2, 'c': 3}
+func(**dict)
