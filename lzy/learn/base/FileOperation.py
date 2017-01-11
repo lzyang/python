@@ -21,3 +21,12 @@ print "=================================="
 #f.write('python language is good')
 
 f.close()
+
+moives={}
+for line in open("/mdata/codedata/python/ml-latest-small/movies.csv"):
+    if line.find("|")>0:
+        (id,title) = line.split("|")[0:2]
+        moives[id] = title
+
+for (id,title) in moives.items():
+    print id,title
